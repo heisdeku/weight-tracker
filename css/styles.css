@@ -1,0 +1,28 @@
+body {
+    border: 10px 10px 10px 10px;
+    background: #FFFFFF;
+}
+
+h2,
+.heading-word {
+    position: absolute;
+    width: 337px;
+    height: 41px;
+    left: 274px;
+    top: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    color: #EB322E;
+}
+
+.image-section>svg {
+    position: absolute;
+    width: 337px;
+    height: 271px;
+    left: 27px;
+    top: 158px;
+    background: #FFFFFF;
+}
