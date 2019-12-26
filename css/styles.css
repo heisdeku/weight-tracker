@@ -6,6 +6,14 @@ body {
     font-family: 'Roboto';
 }
 
+@media screen and {
+    max-width: 1080px
+}
+
+{
+    h2 {}
+}
+
 h2,
 .heading-word {
     margin: auto;
@@ -21,6 +29,8 @@ h2,
     line-height: 30px;
     color: #EB322E;
 }
+
+@media screen and (min-width: 320px) {}
 
 .image-section>svg {
     position: absolute;
@@ -48,7 +58,7 @@ h2,
     margin-top: 3em;
     margin-left: 35em;
     position: absolute;
-    top: 300px;
+    top: 310px;
     left: 515px;
     height: 500em;
     font-family: 'Roboto';
@@ -60,13 +70,10 @@ h2,
 }
 
 .form-parts input[type=text] {
+    width: 232px;
     background: #FFFFFF;
     margin-left: 12px;
     border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
 }
 
 .form-parts input[type=number] {
@@ -76,8 +83,10 @@ h2,
 }
 
 .form-parts img {
-    padding-right: 5px;
+    padding-right: 10px;
     color: white;
+    width: 25px;
+    height: 24px;
 }
 
 .name-form {
@@ -117,7 +126,19 @@ button {
     left: 86em;
     top: 41em;
     background: #EB322E;
-    border-radius: 15px;
+    border-radius: 13px;
+    color: white;
+    font-family: 'Roboto';
 }
 
-.form-button {}
+@media screen and (min-width: 320px) {
+    body {
+        border-top: 10px;
+    }
+    .heading-word {
+        font-size: 20px;
+    }
+    .form-parts {
+        float: left;
+    }
+}
