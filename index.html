@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weight Tracker App</title>
+    <title>Weight TrackApp</title>
     <!--the css style code-->
     <link rel="stylesheet" href="./css/styles.css">
     <!--links to the google fonts-->
@@ -17,46 +17,39 @@
 <body>
     <div id="container">
         <header>
-            <h2 class="heading-word">Weight tracker system</h2>
+            <h2 class="heading-word">Weight tracker</h2>
         </header>
         <div class="content-area">
             <div class="top-part">
-                <div class=" image-section ">
+                <div class=" image-section">
                     <a href="img/weight-tracking.svg"></a>
                 </div>
                 <div class="quotes ">
                     <p>"Make time for it. Just get it done. Nobody ever gets got strong or got in shape by thinking about it. They did it "</p>
                 </div>
             </div>
-            <div id="form-section ">
-                <form class="">
-                    <div class="form-parts name-form">
-                        <img src="./img/name-icon.png">
-                        <label for="name">Name:</label>
-                        <input type="text" name="name" placeholder="Enter your name">
-                    </div>
+            <form id="form-content">
+                    <img src="./img/name-icon.png">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" placeholder="Enter your name........" id="name-form">
 
-                    <div class="form-parts weight-form">
-                        <img src="./img/weight-icon.png">
-                        <label for="weight">Weight: </label>
-                        <input type="number" name="weight" placeholder="Input your Weight">
-                    </div>
+                    <img src="./img/weight-icon.png">
+                    <label for="weight">Weight: </label>
+                    <input type="number" id="weight-form"  placeholder="Input your Weight........" value="">
 
-                    <div class="form-parts height-form">
-                        <img src="./img/height-icon.png">
-                        <label for="height">Height: </label>
-                        <input type="number" name="height" placeholder="Input your height">
-                    </div>
-                    <div class="form-button ">
-                        <button type="submit">Track IT </button>
-                    </div>
-                </form>
-            </div>
+                    <label for="height">Height: </label>
+                    <input type="number"  id="height-form" placeholder="Input your height........." value="">
 
+                    <button type="submit" id="form-button">Check</button>
+            </form>
         </div>
+        <div id="output">
+            <table id="output-area">
+           
+            </table>
+        </div>
+    </div>
     </div>
     <script src="./js/main.js"></script>
 </body>
-
-
 </html>
