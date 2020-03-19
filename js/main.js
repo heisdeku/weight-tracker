@@ -10,9 +10,7 @@ function Values() {
     let name = document.getElementById('name-form').value;
     let weightValue = weightInput.value;
     let heightValue = heightInput.value;
-    
-    //checks for the length of the value
-   
+
     //the instantiated object
     const table = {
         name: [],
@@ -20,6 +18,17 @@ function Values() {
         height: [],
         added: false
     }
+
+    //checks for the length of the value
+    let standardLength = 3;
+    //if (table.prototype.length <= standardLength) {
+    //    //then after the check passes the values to the object declaration
+    //    table.name.push(name);
+    //    table.weight.push(weightValue);
+    //    table.height.push(heightValue);
+    //} else {
+    //    throw new Error('This is above the standard length')
+    //}
     //passes the values gotten into the object declaration
     table.name.push(name);
     table.weight.push(weightValue);
@@ -31,7 +40,7 @@ function Values() {
     //to create the table
     tableConstruct(localStore, outputTable);
 
-    localStorage.setItem("values",JSON.stringify(table));
+    localStorage.setItem("values", JSON.stringify(table));
 
 }
 
@@ -39,28 +48,24 @@ let localStore = localStorage.getItem("table") || []
 
 //responsible for creation of the table 
 function tableConstruct(inputs = [], outputs) {
-   outputs.innerHTML = inputs
+    outputs.innerHTML = inputs
         .map((input) => {
             return `
-        <div class="heading-table">
-            <th class="weight-table">Weight</th>
-            <th class="height-table">Height</th>
-            <tr>
-                <td>${input.weight}</td>
-                <td>${input.height}</td>
-            </tr>
-
-            <span data-text="${input.name}" class="deletion">&#x2715</span>
-        </div>
+                <tr>
+                    <td class="weight-table weight-values">${input.weight}</td>
+                    <td class="height-table height-values">${input.height}</td>
+                
+                    <span data-text="${input.name}"></span>
+                </tr>
         `;
         })
-    .join('');
+        .join('');
 }
 
 
 function toggleSubmit(e) {
     e.preventDefault()
-    console.log(Values());
+    return Values();
 }
 document.addEventListener('DOMContentLoaded', () => {
     console.log('System DOM has been set')
